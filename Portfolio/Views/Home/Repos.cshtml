@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Projects";
+}
+
+@model IEnumerable<Portfolio.Models.Repo>
+
+<h1>Github Projects</h1>
+
+<hr />
+
+<ol>
+    @foreach(var repo in Model)
+	{
+	    <p>@Html.DisplayFor(model => repo.name)</p>
+        <p>@Html.DisplayFor(model => repo.svn_url)</p>
+	    <p>@Html.DisplayFor(model => repo.stargazers_count)</p>
+
+    }
+    
+</ol>

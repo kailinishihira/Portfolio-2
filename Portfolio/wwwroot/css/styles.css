@@ -1,0 +1,17 @@
+﻿img {
+    width: 50%;
+}
+
+.kaili-photo {
+    text-align: center;
+}
+
+.about-header {
+    text-align: center;
+}
+
+.projects-button, .about-button {
+    text-align: center;
+    margin-top: 3%;
+}
+
