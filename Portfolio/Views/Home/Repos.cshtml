@@ -4,17 +4,22 @@
 
 @model IEnumerable<Portfolio.Models.Repo>
 
-<h1>Github Projects</h1>
+<h1 class="projects-header">Github Projects</h1>
 
 <hr />
 
-<ol>
+
+<div class="card-deck">
     @foreach(var repo in Model)
 	{
-	    <p>@Html.DisplayFor(model => repo.name)</p>
-        <p>@Html.DisplayFor(model => repo.svn_url)</p>
-	    <p>@Html.DisplayFor(model => repo.stargazers_count)</p>
-
+           <div class="card">
+            <div class="card-block">
+        	    <h4 class="card-title">@Html.DisplayFor(model => repo.name)</h4>
+			    <a href="@repo.svn_url" target="_blank"> @repo.svn_url.Substring(0, 25)...</a>
+        	    <p class="card-text">@Html.DisplayFor(model => repo.stargazers_count)</p>
+             </div>
+          </div>
     }
-    
-</ol>
+</div>
+
+
